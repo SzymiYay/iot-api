@@ -64,6 +64,8 @@ Project consists of 1 microservice:
 ./run.sh
 ```
 
+### Each step of setup
+
 ### Virtual environment
 #### Create
 ```bash
