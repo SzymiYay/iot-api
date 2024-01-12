@@ -56,6 +56,14 @@ Project consists of 1 microservice:
 ```
 ## Run locally
 
+### One command setup
+1. Docker Desktop must be running
+2. Open Git Bash
+3. Run command
+```bash
+./run.sh
+```
+
 ### Virtual environment
 #### Create
 ```bash
