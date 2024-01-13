@@ -16,9 +16,6 @@ build/
 venv/
 ENV/
 
-# Alembic
-alembic/versions/
-
 # Docker
 .docker/
 

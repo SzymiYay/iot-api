@@ -16,7 +16,15 @@ sys.path.append(BASE_DIR)
 # access to the values within the .ini file in use.
 config = context.config
 
-config.set_main_option("sqlalchemy.url", os.environ.get("DATABASE_URL"))
+db_host = os.environ["DB_HOST"]
+db_port = os.environ["DB_PORT"]
+db_name = os.environ["DB_NAME"]
+db_username = os.environ["DB_USERNAME"]
+db_password = os.environ["DB_PASSWORD"]
+ssl_mode = os.environ["DB_SSL_MODE"]
+DATABASE_URL = f"postgresql+psycopg2://{db_username}:{db_password}@{db_host}:{db_port}/{db_name}?sslmode={ssl_mode}"
+
+config.set_main_option("sqlalchemy.url", DATABASE_URL)
 
 # Interpret the config file for Python logging.
 # This line sets up loggers basically.

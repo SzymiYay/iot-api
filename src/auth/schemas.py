@@ -9,9 +9,14 @@ class Token(BaseModel):
 class RefreshToken(BaseModel):
     refresh_token: str
 
+class TokenData(BaseModel):
+    username: str = None
+
 class TokenInDB(BaseModel):
     id: int
+    refresh_token: str
     status: bool
+    expires: datetime
     time_created: datetime
     time_updated: datetime
     user_id: int
